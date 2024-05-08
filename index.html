@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px auto;
+            flex-direction: column;
+        }
+        h1{
+            color: #008000;
+        }
+        #btn{
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .bt{
+            padding: 5px 10px;
+            font-size: x-large;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #5be45b;
+        }
+        .bt:hover{
+            background-color: #ffff00;
+        }
+        #res{
+            line-height: 100px;
+            margin: 10px auto;
+            height: 100px;
+            width: 100px;
+            border: 1px solid #000000;
+            padding: 50% auto;
+            text-align: center;
+            border-radius: 50%;
+            font-size: xx-large;
+            font-weight: 900;
+            border-style: none;
+            background-color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Counter App</h1>
+        <div id="res">0</div>
+        <div id="btn">
+            <button id="btn1" class="bt">IncreMent</button>
+            <button id="btn2" class="bt">Decrement</button>
+        </div>
+    </div>
+
+    <script>
+
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+        let res = document.getElementById('res');
+
+        btn1.addEventListener('click',()=>{
+            let val = Number(res.innerText);
+            res.innerText = val + 1;
+        })
+
+        btn2.addEventListener('click',()=>{
+            let val = Number(res.innerText);
+            if(val > 0) res.innerText = val - 1;
+        })
+
+
+    </script>
+</body>
+</html>
